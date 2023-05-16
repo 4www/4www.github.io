@@ -5,17 +5,17 @@
 		document.documentElement.style.backgroundColor = `#${(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6)}`
 		</script>
 
-		<script>
-		const $metaUrl = document.querySelector('meta[HTTP-EQUIV="REFRESH"]')
-		const url = $metaUrl.content.split('url=').filter((urlContent) => {
-			try {
-				return new URL(urlContent)
-			} catch(e) {
-				return null
-			};
-		})[0]
-		window.location.replace(url)
-		</script>
+		<!-- <script>
+				 const $metaUrl = document.querySelector('meta[HTTP-EQUIV="REFRESH"]')
+				 const url = $metaUrl.content.split('url=').filter((urlContent) => {
+				 try {
+				 return new URL(urlContent)
+				 } catch(e) {
+				 return null
+				 };
+				 })[0]
+				 window.location.replace(url)
+				 </script> -->
 
 		<meta HTTP-EQUIV="REFRESH" content="0; url=https://github.com/4www">
 	</head>
