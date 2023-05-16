@@ -30,8 +30,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - run: sed -i "s|<meta HTTP-EQUIV=\"REFRESH\" content=\"[^\"]*\">|<meta HTTP-EQUIV=\"REFRESH\" content=\"0; url=https://github.com/$GITHUB_ACTOR\">|" index.html
-      - run: cat index.html
+      - run: ./pages.sh $GITHUB_ACTOR
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
