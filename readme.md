@@ -55,4 +55,7 @@ MY_VAR="user1234"
 
 # Motivations
 
-Mainly to give access to "user owned" URLs and actions attached to them.
+- give access to "user owned" URLs and actions attached to them (1 letter in the
+  URL to reach your profile/destination-url)
+- play with bash, sed, github actions, generic files and repo
+- [show random color](https://ugrp.gitlab.io/artworks/bg-refresh/) when going to a page

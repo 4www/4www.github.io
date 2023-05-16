@@ -20,7 +20,7 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-environment:
+env:
   DESTINATION_URL: "https://github.com/$GITHUB_ACTOR"
 
 jobs:
