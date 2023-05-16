@@ -21,8 +21,9 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  SED_INPUT: '<meta HTTP-EQUIV="REFRESH" content="[^"]*">'
-  SED_OUTPUT: '<meta HTTP-EQUIV="REFRESH" content="0; url=https://github.com/$GITHUB_ACTOR">'
+  SED_INPUT: "<meta HTTP-EQUIV=\"REFRESH\" content=\"[^\"]*\">"
+  SED_OUTPUT: "<meta HTTP-EQUIV=\"REFRESH\" content=\"0; url=https://github.com/$GITHUB_ACTOR\">"
+
 
 jobs:
   # Single deploy job since we're just deploying
