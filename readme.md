@@ -1,19 +1,24 @@
-# HTML redirection (no js fallback) for github page / workflow
+# github <actor> HTML redirection
 
-This project is mainly a html `<name>.github.io to github.com/<name>` redirect.
+This project generates redirects from `<actor>.github.io` to
+`github.com/<actor>`, using HTML meta tag redirection (no js fallback) for
+github page / workflow.
 
 It can also be used more generically, to redirect from this `index.html` page,
-to any other page.
+to any other URL.
 
-The redirect, is an HTML redirect, which `DESTINATION_URL` value, is replaced at
-build time, insite the github aciton/workflow `pages.yml`.
+The redirect, is an HTML redirect, which `DESTINATION_URL` value, is replaced (by `sed`) at
+build time, inside the github file `.github/workflows/pages.yml`.
 
 ## Usage
 
-Multiple possible usage depending on what is prefered.
+It should be possible to:
 
-The "best way", is in the Github project's interface, to set the value of the
-`DESTINATION_URL` environment variable
+1. fork this repository to a user/organisation, at `<actor>.github.io` (or any other project)
+2. multiple possible usage depending on what is prefered.
+
+The "straight forward way", is in the Github project's interface, to set the value of the
+`DESTINATION_URL` environment variable, to the desired URL of redirection.
 
 Otherwise in the `.github/workflows/pages.sh` file, edit the value of:
 
@@ -45,4 +50,9 @@ MY_VAR="user1234"
 
 # Docs:
 
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 - https://docs.github.com/en/actions/learn-github-actions/variables#default-environment-variables
+
+# Motivations
+
+Mainly to give access to "user owned" URLs and actions attached to them.
