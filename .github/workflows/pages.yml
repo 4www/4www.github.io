@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - run: ./pages.sh $GITHUB_ACTOR
+      - run: ./.github/workflows/pages.sh $GITHUB_ACTOR
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
