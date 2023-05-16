@@ -21,8 +21,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  SED_INPUT: '<meta HTTP-EQUIV="REFRESH" content="[^"]*">'
-  SED_OUTPUT: '<meta HTTP-EQUIV="REFRESH" content="0; url=https://github.com/$GITHUB_ACTOR">'
+  SED_INPUT: <meta HTTP-EQUIV="REFRESH" content="[^"]*">
+  SED_OUTPUT: <meta HTTP-EQUIV="REFRESH" content="0; url=https://github.com/$GITHUB_ACTOR">
 
 jobs:
   # Single deploy job since we're just deploying
@@ -35,6 +35,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - run: sed -i "s|$SED_INPUT|$SED_OUTPUT|" index.html
+      - run: cat index.html
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
