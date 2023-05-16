@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  DESTINATION_URL: "https://github.com/${{vars.GITHUB_ACTOR}}"
+  DESTINATION_URL: "https://github.com/${{github.actor}}"
 
 jobs:
   # Single deploy job since we're just deploying
