@@ -1,4 +1,4 @@
-# github <actor> HTML redirection
+# github *actor* HTML redirection
 
 This project generates redirects from `<actor>.github.io` to
 `github.com/<actor>`, using HTML meta tag redirection (no js fallback) for
